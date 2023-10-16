@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define basic styling for the website */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+    /* CSS rules for smaller screens */
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.logo img {
+    height: 20px;
+    width: auto;
+}
+
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 5%;
+    position: relative;
+    bottom: 30px
+    
+}
+
+.nav-link {
+    /* margin: 0 15px; */
+    /* text-decoration: none; */
+    color: black;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    /* background-color: transparent; */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    color: #000;
+    transform: scaleX(1);
+    background-color: #000;
+}
+
+/* .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 5%;
+    position: relative;
+    bottom: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #899499;
+} */
+
+#banner {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+/* .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+} */
+
+/* .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+} */
+
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    /* height: 88.5%; */
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent background for better contrast */
+    padding: 10px 0; /* Adjust padding as needed */
+    z-index: 2; /* Place it on top of the carousel */
+}
+
+#search-input {
+    /* position: absolute;
+    bottom: 100px; */
+    width: 500px;
+    padding: 10px;
+    border: 0px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #fff; /* White background for the input */
+    color: #333; /* Text color */
+}
+
+
+#search-button {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 10px; */
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    border-spacing: 2px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 1px solid #000; /* Black border */
+}
+
+/* Center Product Title */
+.product-title {
+    text-align: center;
+}
+
+.product-title h2 {
+    font-size: 24px;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Add spacing between cards */
+}
+/* PRODUCT */
+
+/* Product Card Styles */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    min-width: 200px; /* Set a minimum width for each product card */
+    margin: 0 10px; /* Add space between product cards */
+    max-width: 200px; /* Set a maximum width for each product card */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the product images */
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.price {
+    color: #0074d9; /* Price color */
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #0074d9; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Darker shade of button color on hover */
+}
+
+/* Zoom Effect on Hover */
+.product-card:hover {
+    transform: scale(1.05);
+}
+/* about us section */
+/* #about-us {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  
+}
+
+h2, h3 {
+  text-align: center;
+   margin-left: 15px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-member {
+  width: 300px;
+  margin: 0 15px 30px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h4 {
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+} */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 4px;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    /* background-color: #474e5d; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/Room.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+     */
+}
+
+.abt-para{
+    max-width: 58%;
+    padding: 10px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* Contact */
+
+.contact-bg{
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/abuja.png);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: black;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+.text{
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+.contact-body{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.contact-info{
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+}
+.contact-info span{
+    display: block;
+}
+.contact-info div{
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+.contact-info span .fas{
+    font-size: 2rem;
+    padding-bottom: 0.9rem;
+    color: black;
+}
+.contact-info div span:nth-child(2){
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.contact-info .text{
+    padding-top: 0.4rem;
+}
+.contact-form{
+    padding: 2rem 0;
+    border-top: 1px solid #c7c7c7;
+}
+.contact-form form{
+    padding-bottom: 1rem;
+}
+.form-control{
+    width: 100%;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+}
+.form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+.contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+.send-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.send-btn:hover{
+    opacity: 0.8;
+}
+
+
+.customer_image{
+    position: absolute;
+    bottom:535px;
+    right: 5%;
+    width: 35%;
+
+}
+.contact-form > div img{
+    width: 10%;
+}
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-footer{
+    padding: 2rem 0;
+    background: #000;
+}
+.contact-footer h3{
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+.social-links a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.4rem;
+    transition: all 0.4s ease;
+}
+.social-links a:hover{
+    color: white;
+    border-color: black;
+}
+
+@media screen and (min-width: 768px){
+    .contact-bg .text{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .contact-bg .text{
+        width: 50%;
+    }
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .contact-info{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* For fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes enter-animation {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+@media (prefers-reduced-motion: no-preference) {
+    .image-animation {
+      animation: enter-animation 0.8s 1;
+    }
+  }
+
+  /* Define the styles for the scrollbar track */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+}
+
+/* Define the styles for the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 6px; /* Round the thumb */
+}
+
+/* Define the styles for the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+}
+
+
