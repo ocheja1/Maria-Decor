@@ -1,11 +1,11 @@
-// JavaScript for responsive navigation menu
-function toggleMobileMenu() {
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active");
-}
+// // JavaScript for responsive navigation menu
+// function toggleMobileMenu() {
+//     const navLinks = document.querySelector(".nav-links");
+//     navLinks.classList.toggle("active");
+// }
 
-// Attach event listener to the mobile menu icon/button
-document.querySelector(".mobile-menu-icon").addEventListener("click", toggleMobileMenu);
+// // Attach event listener to the mobile menu icon/button
+// document.querySelector(".mobile-menu-icon").addEventListener("click", toggleMobileMenu);
 
 // Sample JavaScript function to display a welcome message
 function showWelcomeMessage() {
@@ -14,4 +14,14 @@ function showWelcomeMessage() {
 
 // Attach event listener to a button or element, if needed
 document.getElementById("welcome-button").addEventListener("click", showWelcomeMessage);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    mobileMenuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+    });
+});
 
