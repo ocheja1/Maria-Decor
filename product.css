@@ -8,15 +8,15 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: black;
+    /* color: #333; */
     overflow-x: hidden;
     max-width: 100%;
     scroll-behavior: smooth;
 }
 
 a {
-    color: #000;
+    color: white;
     text-decoration: none;
 }
 
@@ -32,10 +32,11 @@ a:hover {
     width: 100%;
     /* opacity: 20%; */
     z-index: 3;
+    /* background-color: #000; */
 }
 
 header:hover {
-    background-color: #fff;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     opacity: 100%;
 }
@@ -49,13 +50,13 @@ header:hover {
 }
 
 .header li a {
-    display: inline-block;
-    padding: 20px 20px;
-    color: #333; /* Black text */
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-    text-decoration: none;
+  display: inline-block;
+  padding: 20px 20px;
+  color: #fff; /* white text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
 }
 
 .header li a::before {
@@ -74,14 +75,14 @@ header:hover {
 .header li a:hover::before,
 .header li a.active::before {
     transform: scaleX(1);
-    background-color: #000;
+    background-color: #fff;
     bottom: 5px;
     gap: 20px;
 
 }
 
 .header li a.active {
-    color: #000;
+    color: #fff;
 }
 
 /* 
@@ -124,7 +125,7 @@ header:hover {
 }
 
 .header .menu-icon .navicon {
-    background: #333;
+    background: #fff;
     display: block;
     height: 2px;
     position: relative;
@@ -134,7 +135,7 @@ header:hover {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: #333;
+    background: #fff;
     content: '';
     display: block;
     height: 100%;
@@ -244,15 +245,18 @@ header:hover {
 
 
 
-
+#Category{
+  background-color: #000;
+}
 .category {
   display: flex;
   flex-direction: column; /* Change to a column layout for mobile */
   justify-content: space-evenly; /* Center items vertically */
   align-items: center; /* Center items horizontally */
-  margin-top: 5%;
+  /* margin-top: 5%; */
   margin-bottom: 5%;
-  background: transparent;
+  /* background: transparent; */
+  background-color: #000;
   
 }
 
@@ -782,9 +786,13 @@ body {
   }
 }
 
+#contact{
+  background-color: #000;
+}
+
 .contact-bg{
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/abuja.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/Room.jpg);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -812,7 +820,7 @@ body {
 .line div:nth-child(3){
   height: 3px;
   width: 70px;
-  background: black;
+  background: white;
   border-radius: 5px;
 }
 .line{
@@ -822,7 +830,7 @@ body {
 .line div:nth-child(2){
   width: 10px;
   height: 10px;
-  background: black;
+  background: white;
   border-radius: 50%;
 }
 .text{
@@ -844,6 +852,7 @@ body {
 }
 .contact-info span{
   display: block;
+  color: white;
 }
 .contact-info div{
   margin: 0.8rem 0;
@@ -852,7 +861,7 @@ body {
 .contact-info span .fas{
   font-size: 2rem;
   padding-bottom: 0.9rem;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .contact-info div span:nth-child(2){
   font-weight: 500;
@@ -890,8 +899,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
-  color: #fff;
-  background: black;
+  color: black;
+  background: white;
   border: none;
   border-radius: 5px;
   padding: 0.7rem 1.5rem;
@@ -903,13 +912,13 @@ body {
 }
 
 
-/* .customer_image{
+.customer_image{
   position: absolute;
   bottom:535px;
   right: 5%;
   width: 35%;
 
-} */
+}
 .contact-form > div img{
   width: 10%;
 }
