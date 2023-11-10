@@ -8,15 +8,15 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: black;
+    /* color: ; */
     overflow-x: hidden;
     max-width: 100%;
     scroll-behavior: smooth;
 }
 
 a {
-    color: #000;
+    color: white;
     text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ a:hover {
 }
 
 header:hover {
-    background-color: #fff;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -48,7 +48,7 @@ header:hover {
 .header li a {
     display: inline-block;
     padding: 20px 20px;
-    color: #333; /* Black text */
+    color: #fff; /* white text */
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -71,14 +71,14 @@ header:hover {
 .header li a:hover::before,
 .header li a.active::before {
     transform: scaleX(1);
-    background-color: #000;
+    background-color: #fff;
     bottom: 5px;
     gap: 20px;
 
 }
 
 .header li a.active {
-    color: #000;
+    color: #fff;
 }
 
 /* 
@@ -121,7 +121,7 @@ header:hover {
 }
 
 .header .menu-icon .navicon {
-    background: #333;
+    background: #fff;
     display: block;
     height: 2px;
     position: relative;
@@ -131,7 +131,7 @@ header:hover {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: #333;
+    background: #fff;
     content: '';
     display: block;
     height: 100%;
@@ -222,7 +222,7 @@ header:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha (0.8 in this case) to control transparency */
+  background-color: rgba(26, 26, 26, 0.8); /* Adjust the alpha (0.8 in this case) to control transparency */
   display: flex;
   background-size: 10%;
   justify-content: center;
@@ -263,9 +263,10 @@ header:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    color: #fff;
+    color: black;
     text-align: center;
     width: 100%;
+    background-color: #000;
 }
 
 /* .image-container {
@@ -288,13 +289,21 @@ header:hover {
 
 
 /* Center Product Title */
+#products{
+    background-color: #000;
+}
+
+
 .product-title {
     text-align: center;
+    background-color: #000;
 }
 
 .product-title h2 {
     font-size: 24px;
-    margin: 20px 0; /* Add margin for spacing */
+    margin: 0px 0; /* Add margin for spacing */
+    padding-top: 3%;
+    color: white;
 }
 
 /* Product Grid Styles */
@@ -314,7 +323,7 @@ header:hover {
   align-items: center; /* Center items horizontally */
   margin-top: 5%;
   margin-bottom: 5%;
-  background: transparent;
+  /* background: transparent; */
   
 }
 
@@ -324,6 +333,7 @@ header:hover {
   justify-content: center; /* Center items vertically */
   align-items: center; /* Center items horizontally */
   margin-top: 5%;
+    padding-bottom: 5%;
   /* margin-bottom: 5%; */
   background-color: transparent;
   /* gap: 100px; Reduce the gap between items for mobile */
@@ -348,7 +358,7 @@ header:hover {
 
 .cat_link {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,12 +378,13 @@ header:hover {
 
 .cat_link:hover {
   transform: scale(1.1); /* Adjust the scale factor for hover effect */
+  color: whitesmoke;
 }
 
 
 /* Product Card Styles */
 .product-card {
-    background-color: #fff;
+    background-color: black;
     border: 1px solid #ddd;
     padding: 30px;
     border-radius: 8px;
@@ -396,7 +407,7 @@ header:hover {
 
 .product-info h3 {
     font-size: 24px;
-    margin: 10px 0;
+    margin: 0px 0;
 }
 
 .product-info p {
@@ -449,6 +460,7 @@ header:hover {
 .text {
     flex: 1;
     padding: 20px;
+    color: white;
 }
 
 .text h2 {
@@ -602,9 +614,13 @@ h2, h3 {
 
 /* Contact */
 
+#contact{
+    background-color: #000;
+}
+
 .contact-bg{
     height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/abuja.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/img/Room.jpg);
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -632,7 +648,7 @@ h2, h3 {
 .line div:nth-child(3){
     height: 3px;
     width: 70px;
-    background: black;
+    background: white;
     border-radius: 5px;
 }
 .line{
@@ -642,7 +658,7 @@ h2, h3 {
 .line div:nth-child(2){
     width: 10px;
     height: 10px;
-    background: black;
+    background: white;
     border-radius: 50%;
 }
 .text{
@@ -664,6 +680,7 @@ h2, h3 {
 }
 .contact-info span{
     display: block;
+    color: white;
 }
 .contact-info div{
     margin: 0.8rem 0;
@@ -672,7 +689,7 @@ h2, h3 {
 .contact-info span .fas{
     font-size: 2rem;
     padding-bottom: 0.9rem;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .contact-info div span:nth-child(2){
     font-weight: 500;
@@ -710,8 +727,8 @@ h2, h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #fff;
-    background: black;
+    color: black;
+    background: white;
     border: none;
     border-radius: 5px;
     padding: 0.7rem 1.5rem;
