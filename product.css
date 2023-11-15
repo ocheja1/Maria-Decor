@@ -491,7 +491,7 @@ header:hover {
   width: 360px;
   padding: 15px;
   margin: 15px auto;
-  background-color: #000000;
+  background-color: #ffffff;
   /* color: white; */
 }
 
@@ -607,7 +607,7 @@ header:hover {
 .h-bg .h-bg-inner {
   width: 50%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .info-inner {
@@ -647,7 +647,7 @@ header:hover {
   display: block;
   position: relative;
   z-index: 1; /* Ensure the text is on top of the pseudo-element */
-  color: white; /* Set the text color to white */
+  color: rgb(168, 168, 168); /* Set the text color to white */
   /* Add other text styles as necessary */
 }
 
@@ -655,7 +655,7 @@ header:hover {
 .info-inner .p-name {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
-  color: white;
+  color: rgb(63, 63, 63);
 }
 
 .info-inner .p-company {
@@ -722,7 +722,7 @@ header:hover {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .cart .add-to-cart {
@@ -761,6 +761,7 @@ header:hover {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  /* background-color: #fff; */
   /* position: absolute;
   left: 20%; */
   gap: 10px;
