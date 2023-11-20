@@ -182,15 +182,50 @@
           <h2 style="position: absolute; top: 195% ;">About Us</h2>
           <div class="core">
               <img src="/img/nu-upgrade.png" alt="">
-              <div class="text-container">
+              <div class="text-container" data-aos="fade-right">
                   <h3>Our Core Services</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem temporibus alias sit nobis ex suscipit vel neque, expedita minima aliquam ullam architecto voluptas numquam minus, ab assumenda molestiae perferendis aperiam.</p>
-                  <h3 style="position: absolute; top: 80%;">Our Mission/Vision</h3>
-                  <p style="position: absolute; top: 95%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem temporibus alias sit nobis ex suscipit vel neque, expedita minima aliquam ullam architecto voluptas numquam minus, ab assumenda molestiae perferendis aperiam.</p>
+                  <p><b>Innovation:</b> We are committed to pushing the boundaries of technology to create
+                    innovative smart home products.<br>
+                    <b>Simplicity:</b> We believe that technology should be simple to use and integrate
+                    seamlessly into everyday life.<br>
+                    <b>Quality:</b>We prioritize quality in design, materials, and functionality to ensure our prod-
+                    ucts exceed expectations.<br>
+                    <b>Customer-Centric:</b> Our customers’ needs and satisfaction are at the heart of everything
+                    we do.
+                  </p>
+                  <h3 style="position: absolute; top: 95%;">Our Mission/Vision</h3>
+                  
+                  <p style="position: absolute; top: 105%;">
+                    <b style="padding-bottom: 30%;">Mission Statement</b><br>
+                    Our mission is to make smart home technology accessible, intuitive, and delightful for
+                    every homeowner.<br><br>
+                    <b style="padding-bottom: 30%;">Vision Statement</b><br>
+                    To become a leading provider of innovative and elegant smart home solutions that en-
+                    hance everyday living.
+                  </p>
               </div>
           </div>
           <div class="mission">
-              <img src="/img/nt.png" alt="">
+
+            <img src="/img/nt.png" alt="" style=" z-index: -1;">
+            <div class="mission-content" data-aos="fade-left">
+                <h3>"Smart Choices, Smart Success: Redefining Home Futures"</h3>
+                <p>We innovate by pushing technological boundaries, ensuring our smart home products are cutting-edge. Embracing simplicity, our technology seamlessly integrates into your daily life.
+                    Quality is our hallmark, seen in meticulous design and superior materials. 
+                    At the core is customer satisfaction—your unique needs inspire our accomplishments, shaping a smarter, 
+                    more successful future for your home.
+                </p>
+
+              <div class="counter-container">
+                <div id="counter1" class="counter">0</div>
+                <div id="counter2" class="counter">0</div>
+              </div>
+              <div class="counter-texts">
+                  <p><b>Satisfied Clients</b></p>
+                  <p><b>Products Sold</b></p>
+              </div>
+            </div>
+
           </div>
         </section>
       
@@ -313,6 +348,53 @@
           document.querySelector("#content").style.display = "block";
       });
     </script>
+
+    <script>
+      // Function to reset counters
+      function resetCounters() {
+          let counter1 = document.getElementById('counter1');
+          let counter2 = document.getElementById('counter2');
+
+          // Reset counters to their initial values
+          counter1.textContent = '0+';
+          counter2.textContent = '0+';
+      }
+
+      // Function to increment the counters
+      function startCounters() {
+          let counter1 = document.getElementById('counter1');
+          let counter2 = document.getElementById('counter2');
+          let count1 = 0;
+          let count2 = 0;
+
+          let interval = setInterval(() => {
+              count1 += 10; // Adjust the increment as needed
+              count2 += 50; // Adjust the increment as needed
+
+              counter1.textContent = count1 + '+';
+              counter2.textContent = count2 + '+';
+
+              if (count1 >= 1000 && count2 >= 5000) {
+                  clearInterval(interval);
+              }
+          }, 5); // Adjust the interval (milliseconds) as needed
+      }
+
+      // Check the scroll position and reset counters when scrolling down
+      window.addEventListener('scroll', function() {
+          if (window.scrollY > 500) { // Adjust the scroll position where you want to reset the counters
+              resetCounters();
+              startCounters();
+          }
+      });
+
+      // Start counters when the page is loaded
+      document.addEventListener('DOMContentLoaded', startCounters);
+    </script>
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   

@@ -643,18 +643,18 @@ h2, h3 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 20px; /* Adjust as needed */
+    /* margin-top: 20px; Adjust as needed */
 }
 
 .core img {
-    width: 70%;
+    width: 100%;
     height: auto;
     z-index: -1;
 }
 
 .text-container {
     position: absolute;
-    top: 30%;
+    top: 10%;
     right: 50%;
     text-align: left;
     transform: translateY(-50%);
@@ -682,21 +682,78 @@ h2, h3 {
 
 /* Responsive styling for mobile */
 @media (max-width: 767px) {
-    /* .core {
+    .core,
+    .mission {
         flex-direction: column;
         align-items: center;
-    } */
+    }
 
-    .text-container {
-        max-width: 50%;
-        text-align: left;
-        width: 100%;
-        height: 30%;
+    .text-container,
+    .mission-content {
+        max-width: 100%;
+        text-align: center;
     }
 
     #about_us::before {
         display: none; /* Hide the white line on mobile */
     }
+}
+/* 
+.mission {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.mission-content {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 50%; 
+    padding: 20px; 
+    text-align: right;
+    padding: 5%;
+} */
+
+.mission {
+    position: relative;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.mission-content {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 50%; /* Adjust as needed */
+    padding: 50px; /* Adjust as needed */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.counter-texts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
 }
 
 
