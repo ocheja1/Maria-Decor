@@ -4,6 +4,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -682,21 +683,40 @@ h2, h3 {
 
 /* Responsive styling for mobile */
 @media (max-width: 767px) {
-    .core,
+    #about_us h2{
+        background: black;
+        /* color:white; */
+        display: none;
+        position: relative;
+        bottom: 100%;
+    }
+
     .mission {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
+        display: none;
     }
 
-    .text-container,
+    .text-container{
+        max-width: 50%;
+        max-height: 50%;
+        text-align: left;
+        width: 1%;
+        display: none;
+    }
     .mission-content {
-        max-width: 100%;
+        max-width: 50%;
         text-align: center;
+        width: 1%;
+        display: none;
     }
 
-    #about_us::before {
-        display: none; /* Hide the white line on mobile */
+    .core img,
+    .mission img {
+        display: none;
+        background: #000;
     }
+
 }
 /* 
 .mission {
@@ -756,6 +776,9 @@ h2, h3 {
     margin-top: 10px;
 }
 
+@media (max-width: 767px) {
+    
+}
 
 /* Contact */
 
@@ -900,14 +923,16 @@ h2, h3 {
     text-align: center;
 }
 .contact-footer{
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     background: #000;
 }
 .contact-footer h3{
     font-size: 1.3rem;
     color: #fff;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     text-align: center;
+    
 }
 .social-links{
     display: flex;
@@ -929,6 +954,18 @@ h2, h3 {
 .social-links a:hover{
     color: white;
     border-color: black;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    padding-top: 3;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin: 0;
+    /* position: absolute;
+    bottom: 90%; */
+    color: rgb(211, 211, 211);
 }
 
 @media screen and (min-width: 768px){
