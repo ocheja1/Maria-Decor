@@ -179,7 +179,10 @@
 
         <section id="about_us">
           <!-- <h2 style="color: black;">About Us</h2> -->
-          <h2 style="position: absolute; top: 195% ;">About Us</h2>
+          <div class="abt-header">
+            <h2 >About Us</h2>
+          </div>
+
           <div class="core">
               <img src="/img/nu-upgrade.png" alt="">
               <div class="text-container" data-aos="fade-right">
@@ -351,6 +354,38 @@
           document.querySelector("#content").style.display = "block";
       });
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Smooth scrolling for anchor links
+        $('a[href^="#"]').on('click', function (event) {
+          var target = $($(this).attr('href'));
+          if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+          }
+        });
+    
+        // Update active link on scroll
+        $(window).on('scroll', function () {
+          var scrollPosition = $(this).scrollTop();
+          $('section').each(function () {
+            var sectionTop = $(this).offset().top - 50;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              var targetId = $(this).attr('id');
+              $('.nav-link').removeClass('active');
+              $('a[href="#' + targetId + '"]').addClass('active');
+            }
+          });
+        });
+      });
+    </script>
+    
+
 
     <script>
       // Function to reset counters

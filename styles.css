@@ -175,6 +175,18 @@ header:hover {
     top: 0;
 }
 
+.header .menu li a.active {
+    color: #fff;
+  }
+  
+.header li a.active::before {
+    transform: scaleX(1);
+    background-color: #fff;
+    bottom: 5px;
+    gap: 20px;
+  }
+  
+
 /* 48em = 768px */
 @media (min-width: 48em) {
     .header li {
@@ -632,11 +644,20 @@ h2, h3 {
 
 /* About us */
 #about_us {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; */
     color: white;
+}
+
+.abt-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin-top: 19%;
 }
 
 .core {
