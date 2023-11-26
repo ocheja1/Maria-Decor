@@ -959,6 +959,18 @@ header:hover {
   border-color: black;
 }
 
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  /* padding-top: 3;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin: 0; */
+  /* position: absolute;
+  bottom: 90%; */
+  color: rgb(211, 211, 211);
+}
+
 @media screen and (min-width: 768px){
   .contact-bg .text{
       width: 70%;

@@ -23,7 +23,7 @@
         <li><a href="/index.html" class="nav-link">Home</a></li>
         <li><a href="/product.html" class="nav-link active">Products</a></li>
         <li><a href="/index.html" class="nav-link">About Us</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact_section" class="nav-link">Contact</a></li>
       </ul>
     </header>
     <main>
@@ -981,9 +981,9 @@
 
       </section>
 
-      <section id="contact">
+
         <!-- Contact Us Section -->
-        <section class = "contact-section">
+        <section id = "contact_section">
             <div class = "contact-bg">
               <h3>Get in Touch with Us</h3>
               <h2>contact us</h2>
@@ -1070,10 +1070,13 @@
                 <!-- <a href = "#" class = "fab fa-linkedin"></a>
                 <a href = "#" class = "fab fa-youtube"></a> -->
               </div>
+              <div class="footer-bottom">
+                <p>&copy; 2023 Maria Decora. All rights reserved.</p>
+              </div>
             </div>
         </section>
         <!-- Add contact form and information here -->
-      </section>
+      
 
         
         
@@ -1098,6 +1101,37 @@
           document.querySelector("#content").style.display = "block";
       });
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Smooth scrolling for anchor links
+        $('a[href^="#"]').on('click', function (event) {
+          var target = $($(this).attr('href'));
+          if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+          }
+        });
+
+        // Update active link on scroll
+        $(window).on('scroll', function () {
+          var scrollPosition = $(this).scrollTop();
+          $('section').each(function () {
+            var sectionTop = $(this).offset().top - 50;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              var targetId = $(this).attr('id');
+              $('.nav-link').removeClass('active');
+              $('a[href="#' + targetId + '"]').addClass('active');
+            }
+          });
+        });
+      });
+    </script>
+
     <script>
       AOS.init();
     </script>
